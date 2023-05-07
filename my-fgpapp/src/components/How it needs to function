@@ -1,0 +1,32 @@
+Okay so this is not yet a working code few issues that need to be resolved, but I needed to make a few chnages from Xi's code  so that 
+ the code is more modular so everyone can do their bit once the app is running properly.
+First thing is first open 2 terminals 1 for backend and one for front-end, forget about the mongosh that is what I used to see if it
+was connected properly to the mongoDB which is in fact correct. 
+The high level overview and structure of the application is this.
+1. AppTtile
+2. Nav buttons: which includes 1. Home 2. Connect 3. News Essentially there are two pages the Home page which is loaded automatically
+with the webpage. So essentially it should load at the beginning straightaway. The news
+pages is currently only a placeholder which needs to be done. However if you click it it should say "News will be provided later".
+Lets focus on the HomePage
+The Home page has the two components the PricePage the code which plot the crypto currencies exact same as before and then there is 
+also the asset allocation component which will include the pca and hrp from the python code will need to include that in javascript 
+there is an ml-js library to peform pca and portfoliojs for |Hierachical Risk parity, the javascript equivalent of sk-learn.
+
+
+After all of this at the bottom of the page there is a Footer. So very simply the web app is now component based so we can all 
+individually work on the differnet components. The news page needs to be done feel free to be creative with that. 
+The connection to metamask the code should work but for some reason I get an error. It is likely do to the index.js and reactWeb3 
+that needs to be sorted out aswell.
+
+So currently it should look the exact same as before except now when you click news you go to a news page and from there you can click 
+the home button and it will take you back to the home page with the priceplot component. Currently how the connect button should work
+it will just print out 
+your address instead of the button after you have clicked it. This is not optimal and will not look nice so needs to be chnaged. Don't need 
+to get the address of the wallet or whatever but it was just what rami did (extra material) and I just copied the code from that
+and made it fit to the navigation button.
+
+So the app doesn't currently compile but hopefully it should be a quick fix. I am not sure why it doesn't as of yet so someone needs 
+to sort this out. 
+
+The back-end works at least I hope it does. Completely forget about the utils folder and ipfs-access this was when I tried to use the ipfs
+core instead but it didn't work so moved to mongoDB. Dekete it from your computer. 
